@@ -136,9 +136,9 @@ def render_sidebar_with_worldline_logo():
                      style="height: 120px; width: auto; max-width: 280px; object-fit: contain;" 
                      alt="Worldline Logo">
             </div>
-            <h2 style="color: #FFFFFF; font-size: 1.6rem; font-weight: 600; 
+            <h2 style="color: #46beaa; font-size: 1.6rem; font-weight: 600; 
                        margin: 0; text-align: center; letter-spacing: 0.5px;">
-                Code Clarity
+                AUTOBOTS
             </h2>
         </div>
         """, unsafe_allow_html=True)
@@ -146,7 +146,7 @@ def render_sidebar_with_worldline_logo():
     except Exception:
         st.sidebar.markdown("""
         <div style="text-align: center; margin: -2rem -1rem 15px -1rem; padding: 0;">
-            <h2 style="color: #FFFFFF; margin: 0; font-size: 1.6rem;">Code Clarity</h2>
+            <h2 style="color: #46beaa; margin: 0; font-size: 1.6rem;">AUTOBOTS</h2>
         </div>
         """, unsafe_allow_html=True)
 
@@ -264,8 +264,8 @@ def display_release_notes(release_notes: str, selected_version: str):
     
     cleaned_content = '\n'.join([line for line in release_notes.split('\n') if line.strip()])
     
-    st.markdown('<div class="documentation-wrapper">', unsafe_allow_html=True)
-    st.markdown('<div class="documentation-container">', unsafe_allow_html=True)
+    # st.markdown('<div class="documentation-wrapper">', unsafe_allow_html=True)
+    # st.markdown('<div class="documentation-container">', unsafe_allow_html=True)
     
     # --- ANALYZE RELEASE CONTENT ---
     analysis = analyzer.analyze_release_content(release_notes, selected_version)

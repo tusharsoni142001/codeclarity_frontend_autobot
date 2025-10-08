@@ -1,7 +1,11 @@
 /* ============================
    STREAMLIT HEADER HIDING
    ============================ */
-
+/* Fill gaps with matching background */
+.main {
+    background-color: #defaf5 !important;
+}
+   
 header[data-testid="stHeader"] {
     height: 0px !important;
     visibility: hidden !important;
@@ -33,7 +37,9 @@ footer {
 }
 
 .block-container {
-    padding-top: 1rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-top: 0 !important;
     max-width: 100% !important;
 }
 
@@ -60,10 +66,11 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-code-clarity {
     color: #FFFFFF !important;
     font-size: 1.6rem !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     margin: 0 !important;
     text-align: center;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* ============================
@@ -73,22 +80,20 @@ h1, h2, h3, h4, h5, h6 {
 .css-1d391kg label {
     font-size: 1.1rem !important;
     font-weight: 600 !important;
-    color: #E2E8F0 !important;
+    color: #FFFFFF !important;
     margin-bottom: 8px !important;
 }
 
 .stRadio > div {
-    background-color: rgba(255, 255, 255, 0.02) !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
     border-radius: 8px !important;
     padding: 8px !important;
     border: none !important;
     box-shadow: none !important;
     margin-top: 0 !important;
     margin-bottom: 16px !important;
-    /* Ensure consistent width */
-    /* width: 100% !important; */
-    width: 297px !important; /* Set a fixed width */
-    max-width: 100% !important; /* Ensure it doesn't overflow */
+    width: 297px !important;
+    max-width: 100% !important;
 }
 
 .stRadio > div > label {
@@ -99,11 +104,11 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 6px !important;
     font-size: 1rem !important;
     font-weight: 500 !important;
-    color: #E2E8F0 !important;
+    color: #FFFFFF !important;
 }
 
 .stRadio > div > label:hover {
-    background-color: rgba(72, 187, 120, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 /* ============================
@@ -111,9 +116,14 @@ h1, h2, h3, h4, h5, h6 {
    ============================ */
 
 .stSelectbox > div > div {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     border-radius: 8px !important;
+    color: #2C3E50 !important;
+}
+
+.stSelectbox > div > div > div {
+    color: #2C3E50 !important;
 }
 
 .stRadio > div:after, .stRadio > div:before {
@@ -134,9 +144,15 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center !important;
     gap: 20px !important;
     padding: 20px 32px !important;
-    margin: -1rem -1rem 2rem -1rem !important;
-    background: transparent !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin: -0.5rem 0 2rem 0rem !important;
+    background: linear-gradient(135deg, #E8F5F3 0%, #FFFFFF 100%) !important;
+    border: 2px solid #4CBFA6 !important;
+    border-radius: 17px !important;
+    box-shadow: 0 2px 8px rgba(76, 191, 166, 0.1) !important;
+}
+/* Add this new rule */
+.main .block-container {
+    padding-top: 0 !important;
 }
 
 .main-logo-custom {
@@ -148,12 +164,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-portal-heading-custom {
-    color: #CBD5E0 !important;
-    font-size: 1.5rem !important;
-    font-weight: 500 !important;
+    color: #2C3E50 !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
     margin: 0 !important;
     letter-spacing: 0.3px !important;
-    opacity: 0.9 !important;
+    opacity: 1 !important;
     line-height: 1.2 !important;
     padding: 0 !important;
 }
@@ -162,38 +178,31 @@ h1, h2, h3, h4, h5, h6 {
    DOCUMENTATION CONTAINER
    ============================ */
 
-.documentation-container {
-    background: transparent; /* Make container background transparent */
-    border-radius: 0;
-    border: none;
-    overflow: visible;
-    box-shadow: none;
-}
 
 /* --- MINIMAL, ROBUST HEADER --- */
 .doc-header {
-    background: transparent; /* No header background */
-    padding: 10px 0; /* Add some vertical padding */
+    background: transparent;
+    padding: 10px 0;
     border: none;
 }
 
 .doc-header .st-emotion-cache-17k2g4v {
-    align-items: center; /* Vertically align all items in the columns */
+    align-items: center;
 }
 
 .doc-header h1 {
-    color: #F7FAFC !important;
+    color: #2C3E50 !important;
     font-size: 1.8rem !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     margin: 0 !important;
     line-height: 1;
     white-space: nowrap;
 }
 
 .export-label {
-    color: #A0AEC0;
+    color: #7F8C8D;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
     text-align: right;
     padding-right: 5px;
@@ -204,114 +213,116 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .doc-header .stDownloadButton button {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #E2E8F0 !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: linear-gradient(135deg, #4CBFA6 0%, #3AA890 100%) !important;
+    color: #FFFFFF !important;
+    border: none !important;
     border-radius: 8px !important;
     height: 38px !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     font-size: 0.9rem !important;
+    box-shadow: 0 2px 8px rgba(76, 191, 166, 0.3) !important;
 }
 
 .doc-header .stDownloadButton button:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3) !important;
+    background: linear-gradient(135deg, #3AA890 0%, #2D9278 100%) !important;
+    box-shadow: 0 4px 12px rgba(76, 191, 166, 0.4) !important;
+    transform: translateY(-1px);
 }
 
 .version-badge {
-    background-color: #38A169; /* Slightly darker green */
+    background: linear-gradient(135deg, #4CBFA6 0%, #3AA890 100%) !important;
     color: white !important;
     padding: 0 16px;
-    border-radius: 19px; /* Pill shape */
+    border-radius: 19px;
     font-size: 0.9rem !important;
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 38px;
     box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(76, 191, 166, 0.3);
 }
 
 /* --- STYLED SEPARATOR LINE --- */
 .header-divider {
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    /* margin: 1rem 0 2rem 0; Add spacing above and below the line */
+    border-top: 2px solid #E8F5F3 !important;
 }
 
 /* ============================
    DOCUMENTATION CONTENT
    ============================ */
 
-/* Content now sits directly on the page */
 .doc-content {
     padding: 0;
     line-height: 1.7;
 }
 
 .doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4, .doc-content h5, .doc-content h6 {
-    color: #F7FAFC !important;
+    color: #2C3E50 !important;
 }
 
 .doc-content h2 {
     font-size: 1.5rem !important;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #4A5568;
+    border-bottom: 2px solid #E8F5F3;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+    color: #34495E !important;
 }
 
 .doc-content h3 {
     font-size: 1.2rem !important;
-    color: #CBD5E0 !important;
+    color: #4CBFA6 !important;
     margin-top: 1.5rem;
 }
 
 .doc-content p {
-    color: #E2E8F0 !important;
+    color: #34495E !important;
     font-size: 1rem;
 }
-/* ... etc. - You can keep your existing detailed content styles */
+
 .doc-content ul, .doc-content ol {
-    color: #CBD5E0 !important;
+    color: #34495E !important;
     margin: 24px 0 !important;
     padding-left: 28px !important;
 }
 
 .doc-content li {
     margin: 16px 0 !important;
-    color: #CBD5E0 !important;
+    color: #34495E !important;
     line-height: 1.6;
     position: relative;
 }
 
 .doc-content ul li::before {
     content: '▸';
-    color: #48BB78;
+    color: #4CBFA6;
     font-weight: bold;
     position: absolute;
     left: -24px;
 }
 
 .doc-content code {
-    background: rgba(72, 187, 120, 0.18) !important;
-    color: #68D391 !important;
+    background: #E8F5F3 !important;
+    color: #3AA890 !important;
     padding: 4px 10px !important;
     border-radius: 8px !important;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
     font-size: 0.9rem !important;
-    border: 1px solid rgba(72, 187, 120, 0.3) !important;
+    border: 1px solid #4CBFA6 !important;
     font-weight: 500 !important;
 }
 
 .doc-content pre {
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background: #F8FCFB !important;
+    border: 1px solid #E8F5F3 !important;
     border-radius: 12px !important;
     padding: 24px !important;
     margin: 28px 0 !important;
     overflow-x: auto !important;
-    border-left: 4px solid #48BB78 !important;
+    border-left: 4px solid #4CBFA6 !important;
 }
 
 .doc-content table {
@@ -320,13 +331,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 32px 0;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #E8F5F3;
+    box-shadow: 0 4px 12px rgba(76, 191, 166, 0.1);
 }
 
 .doc-content th {
-    background: #2d3748;
-    color: #F7FAFC;
+    background: linear-gradient(135deg, #4CBFA6 0%, #3AA890 100%);
+    color: #FFFFFF;
     padding: 18px 24px;
     text-align: left;
     font-weight: 600;
@@ -337,55 +348,60 @@ h1, h2, h3, h4, h5, h6 {
 
 .doc-content td {
     padding: 18px 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    color: #E2E8F0;
+    border-bottom: 1px solid #E8F5F3;
+    color: #34495E;
     font-size: 0.95rem;
 }
 
 .doc-content tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.03);
+    background: #F8FCFB;
 }
 
 .doc-content a {
-    color: #68D391 !important;
+    color: #4CBFA6 !important;
     text-decoration: none !important;
     font-weight: 500 !important;
 }
 
 .doc-content a:hover {
-    color: #48BB78 !important;
+    color: #3AA890 !important;
     text-decoration: underline !important;
 }
 
 .doc-content strong {
-    color: #F7FAFC !important;
+    color: #2C3E50 !important;
     font-weight: 600 !important;
 }
 
 .doc-content em {
-    color: #68D391 !important;
+    color: #4CBFA6 !important;
     font-style: italic;
 }
 
 .no-content-message {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #FFFFFF;
+    border: 2px dashed #4CBFA6;
     border-radius: 16px;
     padding: 48px;
     text-align: center;
-    color: #CBD5E0 !important;
+    color: #7F8C8D !important;
     margin: 48px 0;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(76, 191, 166, 0.1);
+}
+
+.no-content-message h2 {
+    color: #4CBFA6 !important;
 }
 
 .debug-info {
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background: #F8FCFB !important;
+    border: 1px solid #E8F5F3 !important;
     border-radius: 12px !important;
     padding: 24px !important;
     margin: 24px 0 !important;
-    color: #CBD5E0 !important;
+    color: #34495E !important;
     font-size: 0.9rem;
+    border-left: 4px solid #4CBFA6 !important;
 }
 
 /* ============================
@@ -438,36 +454,32 @@ h1, h2, h3, h4, h5, h6 {
 /* --- STYLED SEPARATOR LINE --- */
 .header-divider {
     border: none !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-    margin: 0 !important; /* Remove all default margins */
-    padding: 0 !important; /* Remove any padding */
-    height: 1px !important; /* Ensure consistent height */
+    border-top: 2px solid #E8F5F3 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 1px !important;
     background: transparent !important;
 }
 
-/* Also target hr elements directly within the documentation wrapper */
-.documentation-wrapper hr {
-    margin: 0 !important;
-    padding: 0 !important;
-}
 
 /* ============================
-   RELEASE OVERVIEW CARD - ORIGINAL DARK GREEN
+   RELEASE OVERVIEW CARD - LIGHT MODE
    ============================ */
 
 .release-overview-card {
-    background: rgba(72, 187, 120, 0.1) !important; /* Back to your original darker green */
-    border: 1px solid rgba(72, 187, 120, 0.3) !important;
+    background: #e1fbf6 !important;
+    border: 1px solid #4CBFA6 !important;
+    border-left: 5px solid #4CBFA6 !important;
     border-radius: 12px !important;
-    padding: 32px !important; /* Original spacing */
+    padding: 32px !important;
     margin: 20px 0 30px 0 !important;
-    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.15) !important;
+    box-shadow: 0 4px 16px rgba(76, 191, 166, 0.15) !important;
 }
 
 .release-overview-card h2 {
-    color: #68D391 !important;
-    font-size: 1.8rem !important; /* Original larger font */
-    font-weight: 600 !important;
+    color: #2C3E50 !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
     margin: 0 0 24px 0 !important;
     display: flex !important;
     align-items: center !important;
@@ -475,17 +487,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .overview-summary {
-    color: #E2E8F0 !important;
-    font-size: 1.15rem !important; /* Original font size */
+    color: #34495E !important;
+    font-size: 1.15rem !important;
     line-height: 1.7 !important;
     margin: 0 0 24px 0 !important;
     font-weight: 400 !important;
 }
 
 .overview-metadata {
-    color: #A0AEC0 !important;
+    color: #7F8C8D !important;
     font-size: 1rem !important;
     font-weight: 500 !important;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-top: 8px !important;
+}
+
+/* ============================
+   SCROLLBAR STYLING
+   ============================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F0F8F7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4CBFA6;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3AA890;
 }
