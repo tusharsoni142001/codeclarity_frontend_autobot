@@ -1,0 +1,6 @@
+.env
+myenv/
+gcp_key/
+env3/
+__pycache__/
+.vscode/
