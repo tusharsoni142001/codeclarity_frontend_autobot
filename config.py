@@ -9,7 +9,7 @@ class Config:
         self.bucket_name = os.getenv("BUCKET_NAME")
         self.project_name = os.getenv("PROJECT_NAME", self.bucket_name)
         self.output_dir = os.getenv("OUTPUT_DIR", "./output")
-        self.google_credentials = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+        # self.google_credentials = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
         
         # Validate required environment variables
         self._validate_config()
@@ -19,8 +19,8 @@ class Config:
         if not self.bucket_name:
             raise ValueError("BUCKET_NAME environment variable is required")
         
-        if not self.google_credentials:
-            raise ValueError("GOOGLE_APPLICATION_CREDENTIALS environment variable is required")
+        # if not self.google_credentials:
+        #     raise ValueError("GOOGLE_APPLICATION_CREDENTIALS environment variable is required")
     
     @property
     def app_config(self):
@@ -28,8 +28,8 @@ class Config:
         return {
             "bucket_name": self.bucket_name,
             "project_name": self.project_name,
-            "output_dir": self.output_dir,
-            "google_credentials": self.google_credentials
+            "output_dir": self.output_dir
+            # "google_credentials": self.google_credentials
         }
 
 # Global config instance
