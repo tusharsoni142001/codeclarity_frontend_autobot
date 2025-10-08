@@ -29,7 +29,7 @@ ensure_pandoc_installed()
 # --- REVISED AND CORRECTED FUNCTION ---
 def create_word_document(content: str, version: str) -> io.BytesIO:
     """
-    Generates a properly formatted Word document by writing to a temporary file
+    Generates a properly formatted Word document by writing to a temporary file 
     and then reading it back into memory. This is required by Pandoc for DOCX output.
     """
     temp_filename = ""
