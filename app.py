@@ -448,7 +448,7 @@ def render_footer():
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.markdown(
-            "<center>codeClarity v1.0 | Powered by Worldline</center>", 
+            "<center>AUTOBOTS v1.0 | Powered by Worldline</center>", 
             unsafe_allow_html=True
         )
 
