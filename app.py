@@ -138,7 +138,7 @@ def render_sidebar_with_worldline_logo():
             </div>
             <h2 style="color: #46beaa; font-size: 1.6rem; font-weight: 600; 
                        margin: 0; text-align: center; letter-spacing: 0.5px;">
-                AUTOBOTS
+                CodeClarity
             </h2>
         </div>
         """, unsafe_allow_html=True)
@@ -146,7 +146,7 @@ def render_sidebar_with_worldline_logo():
     except Exception:
         st.sidebar.markdown("""
         <div style="text-align: center; margin: -2rem -1rem 15px -1rem; padding: 0;">
-            <h2 style="color: #46beaa; margin: 0; font-size: 1.6rem;">AUTOBOTS</h2>
+            <h2 style="color: #46beaa; margin: 0; font-size: 1.6rem;">CodeClarity</h2>
         </div>
         """, unsafe_allow_html=True)
 
@@ -156,7 +156,7 @@ def render_main_header_with_product_branding():
         from PIL import Image
         import base64
         
-        main_logo = Image.open("assets/autobot.jpg")
+        main_logo = Image.open("assets/codeclarity_black.png")
         buffer = io.BytesIO()
         main_logo.save(buffer, format="PNG")
         logo_base64 = base64.b64encode(buffer.getvalue()).decode()
@@ -448,7 +448,7 @@ def render_footer():
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.markdown(
-            "<center>AUTOBOTS v1.0 | Powered by Worldline</center>", 
+            "<center>CodeClarity v1.0 | Powered by Worldline</center>", 
             unsafe_allow_html=True
         )
 

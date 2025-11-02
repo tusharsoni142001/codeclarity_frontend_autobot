@@ -2,5 +2,6 @@
 myenv/
 gcp_key/
 env3/
+env2/
 __pycache__/
 .vscode/

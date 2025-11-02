@@ -6,9 +6,32 @@
     background-color: #defaf5 !important;
 }
    
+/* ============================
+   STREAMLIT HEADER - FIXED
+   ============================ */
+
 header[data-testid="stHeader"] {
-    height: 0px !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+/* Hide logo/menu but keep structure */
+header[data-testid="stHeader"] > div {
     visibility: hidden !important;
+    height: 0 !important;
+}
+
+/* TOGGLE BUTTON - CORRECT SELECTORS */
+button[data-testid="stExpandSidebarButton"],
+button[data-testid="stCollapseSidebarButton"] {
+    visibility: visible !important;
+    display: block !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
 }
 
 .css-18ni7ap, .css-1dp5vir, .css-1lcbmhc {
@@ -23,6 +46,7 @@ header[data-testid="stHeader"] {
 footer {
     visibility: hidden !important;
 }
+
 
 /* ============================
    BASE STYLES
